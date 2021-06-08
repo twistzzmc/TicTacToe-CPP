@@ -16,8 +16,8 @@ int printOptions(std::string errorMessage) {
               << "\t\tBy default it is set to player (you).\n"
 
               << "\n\t-s, --start\n"
-              << "\t\tWho has the first move. Values: opponent, me. Where opponent is --player\n"
-              << "\t\tand me is player two from --second-player (by default you).\n"
+              << "\t\tWho has the first move. Values: p1, p2. Where p1 is --player\n"
+              << "\t\tand p2 is player two from --second-player (by default you).\n"
 
               << "\n\t-h, --help\n"
               << "\t\tPrints options.\n";
