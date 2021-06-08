@@ -15,9 +15,20 @@ int main(int argc, char * argv[])
         return printOptions(parsedOptions[1]);
 
     int winner = startGame(parsedOptions);
+    
 
-    std::string firstPlayer = parsedOptions[0] == "human" ? "human" : "computer - " + parsedOptions[0];
-    std::string secondPlayer = parsedOptions[1] == "human" ? "human" : "computer - " + parsedOptions[0];
+    std::string firstPlayer, secondPlayer;
+
+    if (parsedOptions[0] == "human" || parsedOptions[0] == "None")
+        firstPlayer = "human";
+    else
+        firstPlayer = "computer - " + parsedOptions[0];
+
+    if (parsedOptions[1] == "human" || parsedOptions[1] == "None")
+        secondPlayer = "human";
+    else
+        secondPlayer = "computer - " + parsedOptions[1];
+
 
     switch (winner) {
     case 0:
