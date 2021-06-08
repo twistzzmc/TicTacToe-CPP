@@ -3,6 +3,7 @@
 
 
 #include <array>
+#include <set>
 #include "player.hpp"
 #include "board.hpp"
 
@@ -23,6 +24,8 @@ class ComputerPlayer : public Player {
     private:
         Difficulty initDifficulty(std::string difficulty);
         static bool checkForWin(std::array<char, 3> line, char symbol);
+        int getGoodMoveOdds() const;
+        int pickNormalMoveFieldIndexBasedOnDifficulty(std::vector<int> normalMoves) const;
 };
 
 
